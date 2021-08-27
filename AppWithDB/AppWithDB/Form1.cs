@@ -73,8 +73,8 @@ namespace AppWithDB
         // Проверка телефона
         private bool ValidationPhone(string phone)
         {
-            int parsedValue;
-            if (!int.TryParse(phone, out parsedValue))
+            long parsedValue;
+            if (!long.TryParse(phone, out parsedValue))
             {
                 MessageBox.Show("Некоректно введен номер телефона!", "Ошибка!", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return true;
